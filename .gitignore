@@ -1,0 +1,13 @@
+.DS_Store
+*.log
+*.aux
+*.bcf
+*.idx
+*.out
+*.glo
+*.bbl
+*.blg
+*.run.xml
+*.xdy
+bibtex_check.html
+*~

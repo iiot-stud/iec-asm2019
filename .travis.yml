@@ -1,0 +1,51 @@
+sudo: true
+dist: trusty
+addons:
+  apt:
+    sources:
+      - ppa:texlive-backports/ppa
+    packages:
+      - texlive-fonts-recommended
+      - texlive-fonts-extra
+      - texlive-xetex
+      - texlive-full
+      - texlive-latex-recommended
+      - texlive-latex-extra
+      - texlive-humanities
+      - texlive-science
+      - texlive-pictures
+      - latex-xcolor
+      - pgf
+      - aspell
+      - gnuplot
+      - r-base
+      - graphviz
+      - fonts-sil-gentium
+      - fonts-inconsolata
+      - fonts-droid
+      - fonts-sil-gentium-basic
+install:
+  - sudo apt-get -y install fonts-sil-gentium fonts-inconsolata fonts-droid fonts-sil-gentium-basic cm-super biber texlive-lang-german texlive-full
+  - wget --no-check-certificate http://yar.fruct.org/attachments/download/362/plantuml_7707-1_all.deb
+  - sudo dpkg -i plantuml_7707-1_all.deb
+  #- curl -L "http://downloads.sourceforge.net/project/biblatex-biber/biblatex-biber/0.9.9/binaries/Linux/biber-linux_x86_64.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fbiblatex-biber%2Ffiles%2Fbiblatex-biber%2F0.9.9%2Fbinaries%2FLinux%2F&ts=1422482813&use_mirror=softlayer-ams"|tar xzf -
+  #- export PATH=$PATH:.
+
+script:
+  - make clean
+  - make update
+  - make quick
+  - make bib
+  - make full
+  - echo "testme"|make rename
+  - make quick
+  - file testme.pdf
+  - make llncs
+  - make quick
+  - make ieee
+  - make quick
+  - cat build.sh.log
+
+notifications:
+  email:
+    - alex@willner.ws
