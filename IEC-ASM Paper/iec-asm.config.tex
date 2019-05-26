@@ -41,8 +41,8 @@
 %\usepackage[babel,autostyle=true,german=quotes]{csquotes} % Support for German
 \usepackage{float}                % Provides the H float modifier option
 %\usepackage{cite}                % Cite references %%for bibtex
-\usepackage[backend=biber,
-  style=numeric-comp,%ieee,%numeric-comp
+\usepackage[backend=bibtex,
+  style=ieee,%numeric-comp
   maxnames=3,
   maxcitenames=3,
   maxbibnames=3,
@@ -52,7 +52,7 @@
   %dashed=false
   ]{biblatex}
 %\renewbibmacro*{bbx:savehash}{}  % to enabled the "dashed=false" option in ieee
-\addbibresource{template.bib}
+\addbibresource{references.bib}
 \IfFileExists{global-do-not-edit.bib}{\addbibresource{global-do-not-edit.bib}}{}
 % ------------------------------------------------------------------------------
 
@@ -200,6 +200,8 @@ pdfencoding=auto,
 }
 \makeatother
 \usepackage{cleveref}                 % To ref footnotes twice (use after hyperref)
+\usepackage{graphicx}
+\graphicspath{ {./resources/} }
 % ------------------------------------------------------------------------------
 
 % meta data --------------------------------------------------------------------
