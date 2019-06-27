@@ -1,6 +1,16 @@
-\section{Edge Computing in Smart Manufacturing}\label{sec:main}
+\section{Smart Manufacturing}\label{sec:main}
 
-\begin{itemize}
-\item Outline current key technologies in smart manufacturing including CPS, AS, etc.
-\item Outline possible concepts to integrate Edge/Fog computing capabilities into the I. 4.0 vision / current manufacturing context 
-\end{itemize}
+Smart Manufacturing introduces various new technologies that are geared towards improving the efficiency of current production systems or changing them to create new value and expand existing business models. The main components in implementing this concept consist in the interconnection, collaboration and execution resulting in four layers which consist of the physical resource layer, the network layer, data application layer and the terminal layer \cite{chen2017smart}. 
+
+The resource layer includes all devices that are part of the manufacturing life cycle (sensors, machines) and which enable intelligent manufacturing. Some of the key aspects of this layer are configurable units and controllers to provide the needed flexiblitity of the devices and the controlling processes that observe them. Another key problem consists in the implementation of  a reconfigurable production line in order to adjust for capacity in real time as well as intelligent data acquisation, as the devices are using heterogenous protocols such as RFID, ZigBee and others.
+
+The network layer on the other hand provides the means by which smart factories can operate as they require reliable, secure and fast communication. One of the most prominent solutions is Industrial Wireless Sensor Networks, which build on top of the general WiFi. Because many connectivity and communications technologies are used in the industrial domain, frameworks like OPC UA are used in order to abstract the various technologies away leading to an efficient and uniform communication and therefore allow to enable the implementation of Smart Factories. Other solutions include D2D (Device to Device) communication. One promising technology to implement the Smart Manufacturing effiencently is the implementation of edge technologies, as it provides the means by which network bandwith can be optimized and latency reduced.
+
+The data application layer is used to infer knowledge where the semantic association between manufacturing data is established using ontology models. Other topics also include big data (sensor data, machine log and machine processing data).
+
+In order to implement edge technologies into the current manufacturing domains, a hierarchical architecture is mostly choosen consisting of the device at the bottom, the intermediate layers implementing the edge concepts and the cloud at the top of the hierarchy. The most used communication protocal for such applications is the MQTT-protocol which implements a publish/subscribe approach, where publishers are pushing data to the broker and subscribers subscribe to different topics and receive information about those topics when a change when new data is available.
+
+
+
+
+
